@@ -3,13 +3,6 @@ import axios from "axios";
 export const FETCH_SMURFS = "FETCH_SMURFS";
 export const ADD_SMURF = "ADD_SMURF";
 
-// export const addSmurf = (smurfData) => {
-//   return {
-//     type: ADD_SMURF,
-//     payload: smurfData,
-//   };
-// };
-
 export const fetchSmurfs = () => (dispatch) => {
   axios
     .get("http://localhost:3333/smurfs")
@@ -23,9 +16,12 @@ export const fetchSmurfs = () => (dispatch) => {
     .catch((err) => console.log(err.message));
 };
 
-// export const postNewSmurf = (smurfData) => (dispatch) => {
-//   axios.post("http://localhost:3333/smurfs", smurfData)
-//     .then((res) => {
-//     console.log(res);
-//   });
-// };
+export const postNewSmurf = (smurfData) => (dispatch) => {
+  axios.post("http://localhost:3333/smurfs", smurfData).then((res) => {
+    dispatch({
+      type: ADD_SMURF,
+      payload: res.data,
+    });
+  })
+  .catch((err) => console.log(err.message));
+};

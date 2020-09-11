@@ -8,7 +8,6 @@ const Smurfs = (props) => {
   }, []);
 
   return (
-    
         <div >
           <button onClick={() => props.fetchSmurfs()}>FETCH SMURFS</button>
           <div className="SmurfRow">
