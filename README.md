@@ -82,7 +82,7 @@ You are expected to be able to answer questions in these areas. Your responses c
                 - [x] Import actions back to reducer
             - [] Route state and actions through props to components (from connect)
 
-        - 2. GET fxnlty
+        - 2. [x] GET fxnlty
           - Actions
             - Api
               fetch - [ ] Once you have planned out your state management system, fetch data from the smurf server and display the data it returns
