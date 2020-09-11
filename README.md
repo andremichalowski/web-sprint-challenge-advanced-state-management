@@ -60,92 +60,112 @@ You are expected to be able to answer questions in these areas. Your responses c
 
 **LOOK** at all the files you've been given for this project. One important file to note is `server.js`. This file contains an **API** that you are going to be interfacing with. Below is documentation on how to interact with the **API**.
 
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
 ### Task 2: Project Requirements
 
-Your finished project must include all of the following requirements:
+  Your finished project must include all of the following requirements:
 
-- [ ] Plan and implement how you are going to manage your state for your application
-  - [x] You _must_ use Redux as your state management system
+  - [x] Plan and implement how you are going to manage your state for your application
+    - [x] You _must_ use Redux as your state management system
 
-  - [x] Build a React Redux app
-      - [x] Create store
-        - [x] Pass middleware and fooReducer with thunk
-      - [x] Wrap App with Provider and pass store
+    - [x] Build a React Redux app
+        - [x] Create store
+          - [x] Pass middleware and fooReducer with thunk
+        - [x] Wrap App with Provider and pass store
 
-      - [] Build Component
-        - [] Connect state with "Connect" and "mapStateToProps" 
-          - [] Create actions file with actions
-          - [] Pass action through connect
-          - [] Route state and actions through props to components (from connect)
+        - 1. [] Build Baseline Functionality:
+            - [] Build baseline reducer and state
+            - [] Connect RootComponent with state through "Connect" and "mapStateToProps" 
+              - [] Create actions file with base actions
+                - [] Pass action through connect to component 
+                - [] Import actions back to reducer
+            - [] Route state and actions through props to components (from connect)
 
-   
+        - 2. GET fxnlty
+          - Actions
+            - Api
+              fetch - [ ] Once you have planned out your state management system, fetch data from the smurf server and display the data it returns
+                type 'FETCH_SMURF'
+                payload ?data
 
-    - Future workflow: 
-        base component
-        reducer
-        actions
-        hoc components
+          - Reducer
+            - return ...state
+            - + payload(newdata)
 
-- [ ] Once you have planned out your state management system, fetch data from the smurf server and display the data it returns
-- [ ] Add a form to collect info for a new smurf, and make a POST request to the server to add a new smurf to your village
+          - Build out component
+            .map
+              smurf data
+              smurf data
+              smurf data
+
+        - 3. POST fxnlty
+          - BUILD FORM - [ ] Add a form to collect info for a new smurf, and make a POST request to the server to add a new smurf to your village
+            form
+            inputs
+            submit - onclick
+              handler > post data / Actions>Post data
+        
+
+  
 
 In your solution, it is essential that you follow best practices and produce clean and professional results. You will be scored on your adherence to proper code style and good organization. Schedule time to review, refine, and assess your work and perform basic professional polishing including spell-checking and grammar-checking on your work. It is better to submit a challenge that meets MVP than one that attempts too much and does not.
 
 #### Resource: API documentation 
 
-##### GET '/smurfs'
+  ##### GET '/smurfs'
 
-- [ ] Retrieve an array all the Smurfs in the Smurf DB by writing a `GET` to the endpoint `/smurfs`.
-- [ ] Double check that your response from the server is an array of smurfs.
+  - [ ] Retrieve an array all the Smurfs in the Smurf DB by writing a `GET` to the endpoint `/smurfs`.
+  - [ ] Double check that your response from the server is an array of smurfs.
 
-```js
-[
-  {
-    name: "Brainey",
-    age: 200,
-    height: "5cm",
-    id: 0
-  }
-];
-```
+  ```js
+  [
+    {
+      name: "Brainey",
+      age: 200,
+      height: "5cm",
+      id: 0
+    }
+  ];
+  ```
 
-##### POST '/smurfs'
+  ##### POST '/smurfs'
 
-- [ ] Design the functionality to add a smurf to the Smurf DB you'll need all three fields. `name`, `age`, and `height`.
+    - [ ] Design the functionality to add a smurf to the Smurf DB you'll need all three fields. `name`, `age`, and `height`.
 
-Example of the shape of data to be sent to the `POST` endpoint:
+    Example of the shape of data to be sent to the `POST` endpoint:
 
-```js
-{
-  name: 'Brainey',
-  age: 200,
-  height: '5cm'
-}
-```
+    ```js
+    {
+      name: 'Brainey',
+      age: 200,
+      height: '5cm'
+    }
+    ```
 
-- [ ] Double check to make sure that a smurf is created correctly once your functionality is built out.
+  - [ ] Double check to make sure that a smurf is created correctly once your functionality is built out.
 
-Initially Brainey will be in the array, but it takes more than one smurf to make the village. Be sure to add a few smurfs to populate our smurf village.
+  Initially Brainey will be in the array, but it takes more than one smurf to make the village. Be sure to add a few smurfs to populate our smurf village.
 
-**HINT** if you are going to be working on Stretch Problem, you'll need to use that unique `id`.
+  **HINT** if you are going to be working on Stretch Problem, you'll need to use that unique `id`.
 
-Example of object created in Smurf DB:
+  Example of object created in Smurf DB:
 
-```js
-[
-  {
-    name: "Brainey",
-    age: 200,
-    height: "5cm",
-    id: 0
-  },
-  {
-    name: "Sleepy",
-    age: 200,
-    height: "5cm",
-    id: 1
-  }
-];
+  ```js
+  [
+    {
+      name: "Brainey",
+      age: 200,
+      height: "5cm",
+      id: 0
+    },
+    {
+      name: "Sleepy",
+      age: 200,
+      height: "5cm",
+      id: 1
+    }
+  ];
 ```
 
 
