@@ -19,6 +19,10 @@ In this challenge, you are to build a Smurfs village utilizing Redux as your sta
 
 Commit your code regularly and meaningfully. This helps both you (in case you ever need to return to old code for any number of reasons) and your team lead as the evaluate your solution.
 
+## Initial Commit
+
+- [x] Initial commit
+
 ## Interview Questions
 
 Be prepared to demonstrate your understanding of this week's concepts by answering questions on the following topics. You might prepare by writing down your own answers before hand.
