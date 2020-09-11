@@ -74,12 +74,12 @@ You are expected to be able to answer questions in these areas. Your responses c
           - [x] Pass middleware and fooReducer with thunk
         - [x] Wrap App with Provider and pass store
 
-        - 1. [] Build Baseline Functionality:
-            - [] Build baseline reducer and state
-            - [] Connect RootComponent with state through "Connect" and "mapStateToProps" 
-              - [] Create actions file with base actions
-                - [] Pass action through connect to component 
-                - [] Import actions back to reducer
+        - 1. [] Build Baseline Structure and wiring:
+            - [x] Build baseline reducer and state (wire them to index)
+            - [x] Connect RootComponent with state through "Connect" and "mapStateToProps" 
+              - [x] Create actions file with base actions
+                - [x] Pass action through connect to component 
+                - [x] Import actions back to reducer
             - [] Route state and actions through props to components (from connect)
 
         - 2. GET fxnlty
