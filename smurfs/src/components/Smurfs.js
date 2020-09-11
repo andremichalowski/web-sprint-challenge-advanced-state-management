@@ -8,16 +8,20 @@ const Smurfs = (props) => {
   }, []);
 
   return (
-    <div>
-      {props.smurfs.map((smurf) => (
+    
         <div >
-          <h3>{smurf.name}</h3>
-          <h5>{smurf.age}</h5>
-          <h6>{smurf.height}</h6>
+          <button onClick={() => props.fetchSmurfs()}>FETCH SMURFS</button>
+          <div className="SmurfRow">
+            {props.smurfs.map((smurf) => (
+              <div >
+                <h3>{smurf.name}</h3>
+                <h5>{smurf.age}</h5>
+                <h6>{smurf.height}</h6>
+              </div>
+            ))}
+          </div>
         </div>
-      ))}
-      {/* <button onClick={() => props.fetchSmurfs()}>FETCH SMURFS</button> */}
-    </div>
+   
   );
 };
 

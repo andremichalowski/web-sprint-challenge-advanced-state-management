@@ -1,4 +1,4 @@
-import { FETCH_SMURFS } from '../actions/smurfActions';
+import { FETCH_SMURFS, ADD_SMURF } from '../actions/smurfActions';
 
 const initialState = {
   smurfs: []
@@ -9,8 +9,14 @@ export const smurfReducer = (state = initialState, action) => {
       return {
         ...state,
         smurfs: action.payload
-      }
-      default:
-        return state;
-  }
+      };
+
+    case ADD_SMURF:
+      return {
+        ...state,
+      };
+
+    default:
+      return state;
+  };
 };
